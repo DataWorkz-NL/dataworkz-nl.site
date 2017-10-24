@@ -1,0 +1,37 @@
+<section class="posts_screen page" id="NEWS">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
+                <!-- APPS SCREEN TITLE -->
+                <div class="section_title">
+                    <h2>Nieuws</h2>
+                </div>
+                <!-- END APPS SCREEN TITLE -->
+            </div>
+        </div>
+    </div>
+
+    <div class="screen_slider">
+        <div id="owl-posts" class="owl-carousel">
+
+            {% for post in site.posts %}
+            <div class="item">
+                <i class="fa fa-blog fa-2x" aria-hidden="true"></i>
+                {% if post.type == "event" %}
+                <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                {% endif %}
+                {% if post.type == "blog" %}
+                <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+                {% endif %}
+                {% if post.type == "fun" %}
+                <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+                {% endif %}
+
+                <h2><a href="{{ post.url }}">{{ post.title }}
+                <img src="{{ '/images/post/' | prepend: site.baseurl }}{{ post.icon }}" height="200" alt=""/>
+                </a></h2>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
