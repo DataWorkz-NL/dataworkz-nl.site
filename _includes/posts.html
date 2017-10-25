@@ -7,31 +7,38 @@
                     <h2>Nieuws</h2>
                 </div>
                 <!-- END APPS SCREEN TITLE -->
+
+
             </div>
         </div>
     </div>
 
-    <div class="screen_slider">
-        <div id="owl-posts" class="owl-carousel">
-
+    <div class="container">
+        <div class="row">
             {% for post in site.posts %}
-            <div class="item">
-                <i class="fa fa-blog fa-2x" aria-hidden="true"></i>
-                {% if post.type == "event" %}
-                <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
-                {% endif %}
-                {% if post.type == "blog" %}
-                <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
-                {% endif %}
-                {% if post.type == "fun" %}
-                <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
-                {% endif %}
+            <div class="square">
+                <div class="content">
 
-                <h2><a href="{{ post.url }}">{{ post.title }}
-                <img src="{{ '/images/post/' | prepend: site.baseurl }}{{ post.icon }}" height="200" alt=""/>
-                </a></h2>
+                    <i class="fa fa-blog fa-2x" aria-hidden="true"></i>
+                    {% if post.type == "event" %}
+                    <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                    {% endif %}
+                    {% if post.type == "blog" %}
+                    <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+                    {% endif %}
+                    {% if post.type == "fun" %}
+                    <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+                    {% endif %}
+                    <br>
+                    <h3>
+                        <a href="{{ post.url }}">{{ post.title }}
+                        </a>
+                    </h3>
+                    {{ post.excerpt | truncatewords: 30}}
+                </div>
             </div>
             {% endfor %}
         </div>
     </div>
+
 </section>
