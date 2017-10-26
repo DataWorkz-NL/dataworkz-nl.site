@@ -5,6 +5,11 @@ url: 'https://dataworkz-nl.github.io/dataworkz-site/'
 github_username: Dataworkz-NL
 future: true
 
+permalink: /news/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-redirect-from
+
 exclude:
     - node_modules
     - README.md

@@ -8,13 +8,9 @@
 </section>
 
 
-
-
 <section class="{{page.type}} parallax">
     <ol class="breadcrumb">
-        <li><a href="/#NEWS">Home</a></li>
-        <li class="active">Nieuws</li>
-        <li class="active">{{page.title}}</li>
+        <li><a href="/#">Home</a></li>
     </ol>
 
     <div class="section_overlay">
@@ -23,10 +19,6 @@
                 <div class="col-md-10 col-md-offset-1">
                     <!--&lt;!&ndash; Start Contact Section Title&ndash;&gt;-->
                     <div class="section_post">
-                        <h1>{{ page.title }}</h1>
-                        <!--&lt;!&ndash;<section class="wrapper{% if page.options contains 'minihead' %} minihead{% endif %} style5">&ndash;&gt;-->
-
-
                         {{ content }}
                     </div>
                 </div>
@@ -34,7 +26,4 @@
         </div>
     </div>
 </section>
-
-{% include footer.html %}
-
 </body>

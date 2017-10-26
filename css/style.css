@@ -49,7 +49,6 @@ p {
     padding-bottom: 50px;
 }
 
-
 .section_title h2 {
     text-transform: uppercase;
     text-align: center;
@@ -58,6 +57,7 @@ p {
     font-size: 30px;
     font-weight: 400;
 }
+
 .section_title_snow {
     padding-top: 90px;
     padding-bottom: 50px;
@@ -123,13 +123,6 @@ p {
 }
 
 .parallax {
-    background-attachment: fixed !important;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax_contact {
     background-attachment: fixed !important;
     background-position: center center;
     background-repeat: no-repeat;
@@ -220,7 +213,7 @@ p {
 }
 
 .header {
-    background: url(../images/home.jpg);
+    background: url(../images/backgrounds/home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -512,17 +505,18 @@ tuor:visited {
 }
 
 .testimonial {
-    background: url(../images/testimonial.jpg);
+    background: url(../images/backgrounds/testimonial.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .workatdataworkz {
-    background: url(../images/subscribe.jpg);
+    background: url(../images/backgrounds/subscribe.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: auto;
 }
+
 .section_title_snow ul {
     font-size: 18px;
     align-items: center;
@@ -532,7 +526,6 @@ tuor:visited {
     margin-top: 35px;
     list-style: none;
 }
-
 
 .section_title_snow li:before {
     font-family: FontAwesome;
@@ -806,7 +799,7 @@ div.carousel-inner .item img {
 -----------------------------------------*/
 
 .fun_facts {
-    background: url(../images/fun_bg.jpg) no-repeat center;
+    background: url(../images/backgrounds/fun_bg.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -1122,7 +1115,7 @@ div.carousel-inner .item img {
 -----------------------------------------*/
 
 .subscribe {
-    background-image: url(../images/subscribe.jpg);
+    background-image: url(../images/backgrounds/subscribe.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1345,11 +1338,11 @@ select:-webkit-autofill {
     }
 }
 
-
 /*Stuff for the posts*/
 owl-posts {
     align-content: center;
 }
+
 #owl-posts .item {
     margin: 20px;
 }
@@ -1359,8 +1352,9 @@ owl-posts {
     width: 50%;
     height: auto;
 }
+
 /*#owl-posts .owl-theme .owl-controls .owl-page {*/
-    /*display: inline-block;*/
+/*display: inline-block;*/
 /*}*/
 #owl-posts .owl-theme .owl-controls .owl-page span {
     background: none repeat scroll 0 0 #869791;
@@ -1377,8 +1371,67 @@ owl-posts {
     align-content: center;
 }
 
+/*
+Stuff for the posts page
+ */
+
 .posts_screen {
     background: #f1f1f1;
     padding-bottom: 96px;
     /*height: 100vh;*/
+}
+
+.parallax2 {
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.post_navbar {
+    margin-top: 0px;
+    opacity: 1;
+    padding-top: 15px;
+    height: 35px;
+    padding-top: 0px;
+    background-color: rgba(59, 59, 59, 0.7)
+}
+
+.section_post {
+    padding-top: 90px;
+    padding-bottom: 50px;
+    color: snow;
+}
+
+.fun {
+    background: url(../images/backgrounds/team-event.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    min-height: 100vh;
+
+}
+
+.blog {
+    background: url(../images/backgrounds/notebook.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+
+}
+
+.event {
+    background: url(../images/backgrounds/conference.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.breadcrumb {
+    background-color: rgba(59, 59, 59, 0.7);
+}
+.breadcrumb a {
+    color: whitesmoke;
 }
