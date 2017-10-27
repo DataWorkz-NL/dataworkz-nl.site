@@ -2,12 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
-                <!-- APPS SCREEN TITLE -->
                 <div class="section_title">
                     <h2>Technologie</h2>
                     <p>Enkele van de tools en technieken die we gebruiken.</p>
                 </div>
-                <!-- END APPS SCREEN TITLE -->
             </div>
         </div>
     </div>
@@ -15,38 +13,12 @@
     <div class="screen_slider">
         <div id="demo" class="wow bounceInRight" data-wow-duration="1s">
             <div id="owl-demo" class="owl-carousel">
-
-                <!-- APPS SCREEN IMAGES -->
-                <div class="item">
-                    <img src="{{ '/images/technologies/scala-logo.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/1000px-Hadoop_logo.svg.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/spark-logo-trademark.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/l12866-java-eps-logo-99090.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/elastic.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/github-logo.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/500px-Amazon_com_logo_svg.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/zeppelin_classic_logo.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/casandra_logo.png' | prepend: site.baseurl }}"/>
-                </div>
-                <div class="item">
-                    <img src="{{ '/images/technologies/Rlogo.png' | prepend: site.baseurl }}"/>
-                </div>
+                {% assign image_files = site.static_files | where: "techimage", true %}
+                {% for myimage in image_files %}
+                    <div class="item">
+                        <img src="{{site.baseurl}}{{myimage.path}}"/>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

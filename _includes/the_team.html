@@ -4,7 +4,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <!-- ABOUT US SECTION TITLE-->
                     <div class="section_title_snow">
                         <h2>Het team</h2>
                     </div>
@@ -17,97 +16,59 @@
                     <div id="carousel-example-caption-testimonial" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-caption-testimonial" data-slide-to="0"
-                                class="active"></li>
-                            <li data-target="#carousel-example-caption-testimonial" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-caption-testimonial" data-slide-to="2"></li>
-                            <li data-target="#carousel-example-caption-testimonial" data-slide-to="3"></li>
-                            <li data-target="#carousel-example-caption-testimonial" data-slide-to="4"></li>
+                            {% for i in (0..site.team.size)%}
+                                {% case i %}
+                                    {% when 0 %}
+                                        <li data-target="#carousel-example-caption-testimonial" data-slide-to="0" class="active"></li>
+                                    {% else %}
+                                        {% if i != site.team.size %}
+                                        <li data-target="#carousel-example-caption-testimonial" data-slide-to="{{i}}"></li>
+                                        {% endif %}
+                                {% endcase %}
+                            {% endfor %}
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
+                            {% for item in site.team limit: 1 offset: 0 %}
                             <div class="item active">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <!-- IMAGE -->
                                             <!--{{ '/css/$1' | prepend: site.baseurl }}-->
-                                            <img src="{{ '/images/team/bas.jpg' | prepend: site.baseurl }}" height="350" alt="">
+                                            <img src="{{site.baseurl}}/images/team/{{item.mugshot}}" height="350" alt="A mugshot">
                                             <div class="testimonial_caption">
                                                 <!-- DESCRIPTION -->
-                                                <h2>Bas van der Zwet</h2>
-                                                <h4><span>Boss man,</span> Mr. Nice guy</h4>
-                                                <p>“The boss, managing director.”</p>
+                                                <h2>{{item.name}}</h2>
+                                                <h4><span>{{item.name}},</span> {{item.alias}}</h4>
+                                                {{item.content}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
+
+                            {% for item in site.team  offset: 1 %}
                             <div class="item">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <!-- IMAGE -->
-                                            <img src="{{ '/images/team/Joep.jpg' | prepend: site.baseurl }}"  height="300" alt="">
+                                            <!--{{ '/css/$1' | prepend: site.baseurl }}-->
+                                            <img src="{{site.baseurl}}/images/team/{{item.mugshot}}" height="350" alt="A mugshot">
                                             <div class="testimonial_caption">
                                                 <!-- DESCRIPTION -->
-                                                <h2>Joep Kokkelaar</h2>
-                                                <h4><span>Engineer,</span> Ops crazy</h4>
-                                                <p>“Onze regelneef.”</p>
+                                                <h2>{{item.name}}</h2>
+                                                <h4><span>{{item.name}},</span> {{item.alias}}</h4>
+                                                {{item.content}}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <!-- IMAGE -->
-                                            <img src="{{ '/images/team/olaf.jpg'| prepend: site.baseurl }}" height="300" alt="">
-                                            <div class="testimonial_caption">
-                                                <!-- DESCRIPTION -->
-                                                <h2>Olaf</h2>
-                                                <h4><span>Scientist,</span> Mathematician</h4>
-                                                <p>“Our math men to go to.”</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <!-- IMAGE -->
-                                            <img src="{{ '/images/team/pieter.jpg'  | prepend: site.baseurl }}" height="300" alt="">
-                                            <div class="testimonial_caption">
-                                                <!-- DESCRIPTION -->
-                                                <h2>Pieter van der Meer</h2>
-                                                <h4><span>Engineer,</span> Watersports Junkie</h4>
-                                                <p>“The Programmer, and sailor.”</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <!-- IMAGE -->
-                                            <img src="{{ '/images/team/arno.jpg' | prepend: site.baseurl }}" height="300" alt="">
-                                            <div class="testimonial_caption">
-                                                <!-- DESCRIPTION -->
-                                                <h2>Arno broekhof</h2>
-                                                <h4><span>Engineer,</span> Mr tough</h4>
-                                                <p>“The Programmer, daddy.”</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

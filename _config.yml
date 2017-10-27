@@ -10,6 +10,15 @@ permalink: /news/:year/:month/:day/:title/
 plugins:
   - jekyll-redirect-from
 
+collections:
+  - team
+
+defaults:
+  - scope:
+      path: "images/technologies"
+    values:
+      techimage: true
+
 exclude:
     - node_modules
     - README.md
