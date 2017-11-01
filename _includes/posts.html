@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
-                <!-- APPS SCREEN TITLE -->
+                <!-- APPS SCREEN TITLE -->¡
                 <div class="section_title">
                     <h2>Nieuws</h2>
                 </div>
@@ -31,11 +31,12 @@
                         {% if post.type == "fun" %}
                         <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
                         {% endif %}
-                        <br>
-                        <h3>
+                        <!--<br>-->
+                        <!--<h4>-->
                             <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}
                             </a>
-                        </h3>
+                        <p>
+                        <!--</h4>-->
                         {{ post.excerpt | truncatewords: 30}}
                     </div>
                 </div>

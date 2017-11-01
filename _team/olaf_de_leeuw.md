@@ -4,4 +4,4 @@ mugshot: olaf.jpg
 role: Scientist
 alias: Mathematician
 ---
-Our math men to go to.
+Our math man to go to.
