@@ -21,22 +21,20 @@
                 <div class="square">
                     <div class="content">
 
-                        <i class="fa fa-blog fa-2x" aria-hidden="true"></i>
-                        {% if post.type == "event" %}
-                        <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
-                        {% endif %}
-                        {% if post.type == "blog" %}
-                        <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
-                        {% endif %}
-                        {% if post.type == "fun" %}
-                        <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
-                        {% endif %}
-                        <!--<br>-->
-                        <!--<h4>-->
-                            <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}
-                            </a>
-                        <p>
-                        <!--</h4>-->
+                        <a href="{{site.baseurl}}{{ post.url }}">
+                            {% if post.type == "event" %}
+                            <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+                            {% endif %}
+                            {% if post.type == "blog" %}
+                            <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+                            {% endif %}
+                            {% if post.type == "fun" %}
+                            <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+                            {% endif %}
+
+                            <span>{{ post.title }}</span>
+                        </a>
+
                         {{ post.excerpt | truncatewords: 30}}
                     </div>
                 </div>
