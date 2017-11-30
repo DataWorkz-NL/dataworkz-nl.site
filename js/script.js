@@ -166,18 +166,41 @@ $(document).ready(function() {
 
 
 
+
 //OWL CAROSEL
 $(document).ready(function() {
 
     "use strict";
-    
-    $("#owl-demo").owlCarousel({
+
+    $("#owl-technologies").owlCarousel({
         autoPlay: 3000,
         items: 4, //10 items above 1000px browser width
         itemsDesktop: [1370, 3], //5 items between 1000px and 901px
         itemsDesktopSmall: [900, 2], // betweem 900px and 601px
         itemsTablet: [600, 1], //2 items between 600 and 0
     });
+});
+
+$(document).ready(function() {
+
+    $("#the-team-carousel").owlCarousel({
+
+        // autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        navigation: true,
+        pagination: true,
+        responsive: true,
+        goToFirst: false,
+
+        // CSS Styles
+        baseClass : "xxxxx",
+        theme : "xxxxx"
+
+    });
+
 });
 
 
