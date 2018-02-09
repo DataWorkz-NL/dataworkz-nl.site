@@ -1,6 +1,6 @@
 ---
-name: Pieter van der Meer
-mugshot: pieter_overview.jpg
+name: Jeff Powell
+mugshot: jeff_overview.jpg
 role: Engineer
 alias: Watersports Junkie
 ---

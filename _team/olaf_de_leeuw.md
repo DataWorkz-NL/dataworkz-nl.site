@@ -1,6 +1,6 @@
 ---
 name: Olaf de Leeuw
-mugshot: olaf.jpg
+mugshot: olaf_overview.jpg
 role: Scientist
 alias: Mathematician
 ---

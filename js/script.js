@@ -1,3 +1,4 @@
+
 //LOADER/SPINNER
 $(window).bind("load", function() {
 
@@ -9,6 +10,7 @@ $(window).bind("load", function() {
 
 //MENU APPEAR AND HIDE
 $(document).ready(function() {
+
 
     "use strict";
     
@@ -105,7 +107,7 @@ $(document).ready(function() {
 
 
 $(function() {
-	
+
 	"use strict";
 
   $('a[href*=#]:not([href=#])').click(function() {
@@ -174,10 +176,34 @@ $(document).ready(function() {
 
     $("#owl-technologies").owlCarousel({
         autoPlay: 3000,
-        items: 4, //10 items above 1000px browser width
-        itemsDesktop: [1370, 3], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
-        itemsTablet: [600, 1], //2 items between 600 and 0
+        // items: 4, //10 items above 1000px browser width
+        // itemsDesktop: [1370, 3], //5 items between 1000px and 901px
+        // itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+        // itemsTablet: [600, 1], //2 items between 600 and 0
+        // loop: true,
+
+        autoplay:true,
+        autoplayTimeout:1500,
+        // autoplayHoverPause:true
+
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:false,
+            }
+        }
+
     });
 });
 
@@ -185,19 +211,40 @@ $(document).ready(function() {
 
     $("#the-team-carousel").owlCarousel({
 
-        // autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-        items : 4,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3],
         navigation: true,
-        pagination: true,
-        responsive: true,
-        goToFirst: false,
+        pagination: false,
 
-        // CSS Styles
-        baseClass : "xxxxx",
-        theme : "xxxxx"
+        dots: false,
+        loop: true,
+        nav: true,
+        navText: ['<i class=\"fa fa-long-arrow-left\"></i>', '<i class=\"fa fa-long-arrow-right\"></i>'],
+
+        // autoplay:true,
+        // autoplayTimeout:2500,
+        // autoplayHoverPause:true,
+
+        responsive:{
+            0:{
+                items:1,
+                nav:true,
+                autoplay:true,
+                autoplayTimeout:2500,
+                autoplayHoverPause:true
+            },
+            600:{
+                items:2,
+                nav:true,
+                autoplay:true,
+                autoplayTimeout:2500,
+                autoplayHoverPause:true
+            },
+            1000:{
+                items:3,
+                nav:true
+            }
+        }
+
 
     });
 

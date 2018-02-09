@@ -1,6 +1,6 @@
 ---
 name: Joep Kokkelaar
-mugshot: Joep.jpg
+mugshot: joep_overview.jpg
 role: Engineer
 alias: Ops crazy
 ---
