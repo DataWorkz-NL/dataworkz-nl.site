@@ -200,7 +200,7 @@ $(document).ready(function() {
             },
             1000:{
                 items:5,
-                nav:false,
+                nav:false
             }
         }
 
@@ -211,37 +211,33 @@ $(document).ready(function() {
 
     $("#the-team-carousel").owlCarousel({
 
+        autoPlay: 3000,
+        autoplay:true,
 
         navigation: true,
         pagination: false,
 
         dots: false,
         loop: true,
-        nav: true,
-        navText: ['<i class=\"fa fa-long-arrow-left\"></i>', '<i class=\"fa fa-long-arrow-right\"></i>'],
-
-        // autoplay:true,
-        // autoplayTimeout:2500,
-        // autoplayHoverPause:true,
 
         responsive:{
             0:{
                 items:1,
-                nav:true,
+                nav:false,
                 autoplay:true,
                 autoplayTimeout:2500,
                 autoplayHoverPause:true
             },
             600:{
                 items:2,
-                nav:true,
+                nav:false,
                 autoplay:true,
                 autoplayTimeout:2500,
                 autoplayHoverPause:true
             },
             1000:{
                 items:3,
-                nav:true
+                nav:false
             }
         }
 

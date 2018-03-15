@@ -4,8 +4,9 @@ mugshot: jurriaan_overview.jpg
 role: Engineer
 alias: Watersports Junkie
 ---
-The Programmer, and sailor.
-
-* Item 1
-* Item 2
-* Item 3jek
+* **Newtonpendel** Visualisatie actie = reactie
+* **Kompas** Wijst meestal in de goede richting
+* **Mountainbike helm** Essentiële bescherming
+* **Squashbal** Hier wordt best hard tegenaan gemept. Dan wordt de bal heel even een ei.
+* **headphones** Hier komt muziek uit indien aangesloten
+* **haal-het-touwtje-los-puzzel** Een geduldskwestie.
