@@ -6,6 +6,10 @@ alias: Mr tough
 ---
 ### The Programmer, daddy.
 
-* **Sjaal**: Carnaval!!
-* **Trompet**: djasl
-* **Koffie**: The stuff i run on
+* **Sjaal** Oeteldonk
+* **Trompet**: Muziek
+* **Koffie**: Heerlijk
+* **Java Magazine** Coding
+* **Apple Macbook** Work 
+* **Apple watch** Gadgets
+* **Fruit** Healthy
