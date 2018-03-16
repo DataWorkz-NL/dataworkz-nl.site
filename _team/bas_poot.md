@@ -4,7 +4,7 @@ mugshot: basp_overview.jpg
 role: Engineer
 alias: Watersports Junkie
 ---
-* **Paspoort**, ik houd van reizen en zie de wereld graag. Plus Neder
+* **Paspoort**, ik houd van reizen en zie de wereld graag. 
 * **Lonely Planet Colombia**, laatste verre reis
 * **Boek** “The Philosopher At The End Of The Universe” , introductie tot alle grote thema’s in de filosofie aan de hand van sci-fi films die ik altijd goed vond, maar nooit kon uitleggen waarom. Dit boek verhelderde dat de filosofische thema’s het zo boeiend maakte.
 * **Bokshandschoen** ik houd van kickboksen.
