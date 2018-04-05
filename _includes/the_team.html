@@ -1,7 +1,9 @@
 <section id="TEAM" class="testimonial parallax">
 
+
     <div class="section_overlay">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="section_title_snow">
@@ -10,68 +12,84 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row">
-                <div class="col-md-12 wow bounceInDown">
-                    <div id="carousel-example-caption-testimonial" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            {% for i in (0..site.team.size)%}
-                                {% case i %}
-                                    {% when 0 %}
-                                        <li data-target="#carousel-example-caption-testimonial" data-slide-to="0" class="active"></li>
-                                    {% else %}
-                                        {% if i != site.team.size %}
-                                        <li data-target="#carousel-example-caption-testimonial" data-slide-to="{{i}}"></li>
-                                        {% endif %}
-                                {% endcase %}
-                            {% endfor %}
-                        </ol>
+                <div class="col-md-12">
+                    <div id="the-team-carousel" class="owl-carousel owl-theme">
+                        {% for item in site.team %}
+                        <div class="item" style="width: 300px" data-hash="{{item.name}}">
+                            <a href="#{{item.name}}" class="pop" data-toggle="modal"
+                               data-target="#{{item.mugshot | remove:'.'}}">
+                                <img src="{{site.baseurl}}/images/team/{{item.mugshot}}"
+                                     alt="{{item.name}}" data-title="{{item.name}}">
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            {% for item in site.team limit: 1 offset: 0 %}
-                            <div class="item active">
-                                <div class="container">
+                    {% for item in site.team %}
+                    <div class="modal fade" id="{{item.mugshot | remove:'.'}}" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!--TODO Make a close cross on top of the window-->
+                                <div class="modal-header">
                                     <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <!-- IMAGE -->
-                                            <!--{{ '/css/$1' | prepend: site.baseurl }}-->
-                                            <img src="{{site.baseurl}}/images/team/{{item.mugshot}}" height="350" alt="A mugshot">
-                                            <div class="testimonial_caption">
-                                                <!-- DESCRIPTION -->
-                                                <h2>{{item.name}}</h2>
-                                                <h4><span>{{item.role}},</span> {{item.alias}}</h4>
-                                                "{{item.content}}"
+                                        <div class="col-md-8">
+                                            <div style="text-transform: capitalize;font-size: 30px;font-weight: 400;">
+                                                {{item.name}}
                                             </div>
+                                        </div>
+                                        <div class="col-md-2 pull-right">
+                                            <button type="button" class="close close-profile-modal" data-dismiss="modal"
+                                                    aria-hidden="true">
+                                                x
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="row">
+                                        <div class="col-md-6" align="middle">
+                                            <!--TODO make this zoom -->
+                                            <img src="{{site.baseurl}}/images/team/{{item.mugshot}}"
+                                                 style="width: 100%;height: 100%" title="{{item.name}}">
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{item.content}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
-
-                            {% for item in site.team  offset: 1 %}
-                            <div class="item">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <!-- IMAGE -->
-                                            <!--{{ '/css/$1' | prepend: site.baseurl }}-->
-                                            <img src="{{site.baseurl}}/images/team/{{item.mugshot}}" height="350" alt="A mugshot">
-                                            <div class="testimonial_caption">
-                                                <!-- DESCRIPTION -->
-                                                <h2>{{item.name}}</h2>
-                                                <h4><span>{{item.role}},</span> {{item.alias}}</h4>
-                                                "{{item.content}}"
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+
+                    <div style="padding-top: 20px" class="team-list">
+                        <ul>
+                            {% for item in site.team %}
+                            <li>
+                                <a href="#{{item.name}}" class="pop" data-toggle="modal"
+                                   data-target="#{{item.mugshot | remove:'.'}}">{{item.name}}
+                                </a>
+                                <!--<a href="#{{item.name}}"-->
+                                   <!--style="padding-top: 10px;padding-left: 5px;padding-right: 5px;color: white;hover:gray">{{item.name}}</a>-->
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+
+
             </div>
         </div>
     </div>
