@@ -236,7 +236,7 @@ $(document).ready(function() {
                 autoplayHoverPause:true
             },
             1000:{
-                items:3,
+                items:2,
                 nav:false
             }
         }

@@ -18,7 +18,7 @@
                 <div class="col-md-12">
                     <div id="the-team-carousel" class="owl-carousel owl-theme">
                         {% for item in site.team %}
-                        <div class="item" style="width: 300px" data-hash="{{item.name | replace: ' ':''}}">
+                        <div class="item" data-hash="{{item.name | replace: ' ':''}}">
                             <a href="#{{item.name | replace: ' ',''}}" class="pop" data-toggle="modal"
                                data-target="#{{item.mugshot | remove:'.'}}">
                                 <img src="{{site.baseurl}}/images/team/{{item.mugshot}}"

@@ -16,6 +16,15 @@
     left: 0;
 }
 
+#the-team-carousel .item img {
+    display: block;
+    width: 30vw;
+    /*width: 30%;*/
+    height: auto;
+    /*height: 40vh;*/
+    vertical-align: middle;
+}
+
 #the-team-carousel .owl-next {
     right: 0;
 }
