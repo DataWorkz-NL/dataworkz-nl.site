@@ -18,8 +18,8 @@
                 <div class="col-md-12">
                     <div id="the-team-carousel" class="owl-carousel owl-theme">
                         {% for item in site.team %}
-                        <div class="item" style="width: 300px" data-hash="{{item.name}}">
-                            <a href="#{{item.name}}" class="pop" data-toggle="modal"
+                        <div class="item" style="width: 300px" data-hash="{{item.name | replace: ' ':''}}">
+                            <a href="#{{item.name | replace: ' ',''}}" class="pop" data-toggle="modal"
                                data-target="#{{item.mugshot | remove:'.'}}">
                                 <img src="{{site.baseurl}}/images/team/{{item.mugshot}}"
                                      alt="{{item.name}}" data-title="{{item.name}}">
@@ -30,7 +30,7 @@
 
                     {% for item in site.team %}
                     <div class="modal fade" id="{{item.mugshot | remove:'.'}}" tabindex="-1" role="dialog"
-                         aria-labelledby="myModalLabel" aria-hidden="true">
+                         aria-labelledby="myModalLabel" aria-hidden="true" >
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
 
@@ -55,7 +55,8 @@
                                         <div class="col-md-6" align="middle">
                                             <!--TODO make this zoom -->
                                             <img src="{{site.baseurl}}/images/team/{{item.mugshot}}"
-                                                 style="width: 100%;height: 100%" title="{{item.name}}">
+                                                 style="width: 100%;height: 100%" title="{{item.name}}"
+                                                 alt="{{item.name}}">
                                         </div>
                                         <div class="col-md-6">
                                             {{item.content}}
@@ -65,31 +66,31 @@
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            <div class="row">
+                <div class="row">
 
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
 
-                    <div style="padding-top: 20px" class="team-list">
-                        <ul>
-                            {% for item in site.team %}
-                            <li>
-                                <a href="#{{item.name}}" class="pop" data-toggle="modal"
-                                   data-target="#{{item.mugshot | remove:'.'}}">{{item.name}}
-                                </a>
-                                <!--<a href="#{{item.name}}"-->
-                                   <!--style="padding-top: 10px;padding-left: 5px;padding-right: 5px;color: white;hover:gray">{{item.name}}</a>-->
-                            </li>
-                            {% endfor %}
-                        </ul>
+                        <div style="padding-top: 20px" class="team-list">
+                            <ul>
+                                {% for item in site.team %}
+                                <li>
+                                    <a href="#{{item.name | replace: ' ',''}}" class="pop" data-toggle="modal"
+                                       data-target="#{{item.mugshot | remove:'.'}}">{{item.name}}
+                                    </a>
+                                    <!--<a href="#{{item.name}}"-->
+                                    <!--style="padding-top: 10px;padding-left: 5px;padding-right: 5px;color: white;hover:gray">{{item.name}}</a>-->
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
+                    <div class="col-md-2"></div>
+
+
                 </div>
-                <div class="col-md-2"></div>
-
-
             </div>
         </div>
     </div>

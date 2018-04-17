@@ -16,7 +16,7 @@
                 {% assign image_files = site.static_files | where: "techimage", true %}
                 {% for myimage in image_files %}
                     <div class="item">
-                        <img src="{{site.baseurl}}{{myimage.path}}"/>
+                        <img src="{{site.baseurl}}{{myimage.path}}" alt="{{myimage}}"/>
                     </div>
                 {% endfor %}
             </div>
