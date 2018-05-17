@@ -1,23 +1,14 @@
+"use strict";
 
 //LOADER/SPINNER
 $(window).bind("load", function() {
-
-    "use strict";
-    
     $(".spn_hol").fadeOut(1000);
 });
 
 
 //MENU APPEAR AND HIDE
 $(document).ready(function() {
-
-
-    "use strict";
-    
     $(window).scroll(function() {
-
-        "use strict";
-        
         if ($(window).scrollTop() > 80) {
             $(".navbar").css({
                 'margin-top': '0px',
@@ -61,13 +52,7 @@ $(document).ready(function() {
 
  // MENU SECTION ACTIVE
 $(document).ready(function() {
-
-    "use strict";
-    
     $(".navbar-nav li a").click(function() {
-
-        "use strict";
-        
         $(".navbar-nav li a").parent().removeClass("active");
         $(this).parent().addClass("active");
     });
@@ -78,24 +63,15 @@ $(document).ready(function() {
 // Hilight MENU on SCROLl
 
 $(document).ready(function() {
-
-    "use strict";
-    
     $(window).scroll(function() {
-
-        "use strict";
-        
         $(".page").each(function() {
-
-            "use strict";
-            
             var bb = $(this).attr("id");
             var hei = $(this).outerHeight();
             var grttop = $(this).offset().top - 70;
             if ($(window).scrollTop() > grttop - 1 && $(window).scrollTop() < grttop + hei - 1) {
-                var uu = $(".navbar-nav li a[href='#" + bb + "']").parent().addClass("active");
+                $(".navbar-nav li a[href='#" + bb + "']").parent().addClass("active");
             } else {
-                var uu = $(".navbar-nav li a[href='#" + bb + "']").parent().removeClass("active");
+                $(".navbar-nav li a[href='#" + bb + "']").parent().removeClass("active");
             }
         });
     });
@@ -107,9 +83,6 @@ $(document).ready(function() {
 
 
 $(function() {
-
-	"use strict";
-
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -128,13 +101,7 @@ $(function() {
 
 // FIX HOME SCREEN HEIGHT
 $(document).ready(function() {
-
-    "use strict";
-    
     setInterval(function() {
-
-        "use strict";
-        
         var widnowHeight = $(window).height();
         var containerHeight = $(".home-container").height();
         var padTop = widnowHeight - containerHeight;
@@ -149,9 +116,6 @@ $(document).ready(function() {
 
 //PARALLAX
 $(document).ready(function() {
-
-    "use strict";
-    
     $(window).bind('load', function() {
         "use strict";
         parallaxInit();
@@ -171,39 +135,14 @@ $(document).ready(function() {
 
 //OWL CAROSEL
 $(document).ready(function() {
-
-    "use strict";
-
     $("#owl-technologies").owlCarousel({
         autoPlay: 3000,
-        // items: 4, //10 items above 1000px browser width
-        // itemsDesktop: [1370, 3], //5 items between 1000px and 901px
-        // itemsDesktopSmall: [900, 2], // betweem 900px and 601px
-        // itemsTablet: [600, 1], //2 items between 600 and 0
-        // loop: true,
-
-        autoplay:true,
+        autoplay: true,
         autoplayTimeout:1500,
-        // autoplayHoverPause:true
-
         loop:true,
         margin:10,
         responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:false
-            },
-            600:{
-                items:3,
-                nav:false
-            },
-            1000:{
-                items:5,
-                nav:false
-            }
-        }
-
+        items: 1
     });
 });
 
@@ -240,20 +179,13 @@ $(document).ready(function() {
                 nav:false
             }
         }
-
-
     });
-
 });
-
 
     
  //PRETTYPHOTO
 
 $(document).ready(function() {
-
-    "use strict";
-
     $("a[rel^='prettyPhoto']").prettyPhoto({
         show_title: false,
         /* true/false */
@@ -264,9 +196,6 @@ $(document).ready(function() {
 
 //WOW JS
 $(document).ready(function() {
-
-    "use strict";
- 
     new WOW().init();
 });
 
@@ -274,9 +203,6 @@ $(document).ready(function() {
 
 //RESPONSIVE VIDEO
 $(document).ready(function() {
-
-    "use strict";
-    
     // Basic FitVids Test
     $(".video").fitVids();
 });
@@ -285,18 +211,12 @@ $(document).ready(function() {
 
 //MAILCHIMP
 $(document).ready(function() {
-
-    "use strict";
-    
     $('#mc-form').ajaxChimp({
         callback: mailchimpCallback,
         url: "https://themerocks.us9.list-manage.com/subscribe/post?u=f04c804868966b1b4509daa9b&amp;id=ad7b6aba65"
     });
 
     function mailchimpCallback(resp) {
-
-        "use strict";
-        
         if (resp.result === 'success') {
             $('.subscription-success').html('<i class="pe-7s-check"></i><br/>' + resp.msg).fadeIn(1000);
             $('.subscription-error').fadeOut(500);
@@ -310,13 +230,7 @@ $(document).ready(function() {
 
 //CONTACT FORM VALIDATION
 $(document).ready(function() {
-
-    "use strict";
-    
     $(".form_submit").click(function() {
-
-        "use strict";
-        
         var name = $("#name").val();
         var emaild = $("#email").val();
         var subject = $("#subject").val();
@@ -355,9 +269,8 @@ $(document).ready(function() {
                     text: 'Message: \n' + message + '\n\n Sender: ' + name + ' ' + emaild
                 },
 
-
                 type: 'POST',
-                success: function(data) {
+                success: function() {
                     $(".Sucess").show();
                     $(".Sucess").fadeIn(2000);
                     $(".Sucess").html("<i class='fa fa-check'></i> Beste <b>" + name + "</b> Dank je wel voor je informatie verzoek we nemen zo snel mogelijk contact met je op!");
@@ -377,14 +290,9 @@ $(document).ready(function() {
     });
 });
 
-
- 
-/// SMOOTH SCROLL           
+/// SMOOTH SCROLL
 
 $(document).ready(function() {
-
-    "use strict";
-    
     var scrollAnimationTime = 1200,
         scrollAnimation = 'easeInOutExpo';
     $('a.scrollto').bind('click.smoothscroll', function(event) {

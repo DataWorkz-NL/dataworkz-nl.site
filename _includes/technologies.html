@@ -1,25 +1,34 @@
 <section class="apps_screen page" id="TECHNOLOGY">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
-                <div class="section_title">
-                    <h2>Technologie</h2>
-                    <p>Enkele van de tools en technieken die we gebruiken.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
+				<div class="section_title">
+					<h2>Technologie</h2>
+					<p>Enkele van de tools en technieken die we gebruiken.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <div class="screen_slider">
-        <div id="demo" class="wow bounceInRight" data-wow-duration="1s">
-            <div id="owl-technologies" class="owl-carousel">
-                {% assign image_files = site.static_files | where: "techimage", true %}
-                {% for myimage in image_files %}
-                    <div class="item">
-                        <img src="{{site.baseurl}}{{myimage.path}}" alt="{{myimage}}"/>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+	<div class="screen_slider">
+		<div id="demo" class="wow bounceInRight" data-wow-duration="1s">
+			<div id="owl-technologies" class="owl-carousel">
+				{% assign image_files = site.static_files | where: "techimage", true %}
+				{% for myimage in image_files %}
+				<div class="item">
+					<img src="{{site.baseurl}}{{myimage.path}}" alt="{{myimage}}"/>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="screen_grid">
+		{% assign image_files = site.static_files | where: "techimage", true %}
+		{% for myimage in image_files %}
+		<div class="grid-item">
+			<img src="{{site.baseurl}}{{myimage.path}}" alt="{{myimage}}"/>
+		</div>
+		{% endfor %}
+	</div>
 </section>
