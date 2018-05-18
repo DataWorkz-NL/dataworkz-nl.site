@@ -1,47 +1,52 @@
 <section class="posts_screen page" id="NEWS">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
-                <!-- APPS SCREEN TITLE -->¡
-                <div class="section_title">
-                    <h2>Nieuws</h2>
-                </div>
-                <!-- END APPS SCREEN TITLE -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 wow fadeInBig" data-wow-duration="1s">
+				<!-- APPS SCREEN TITLE -->
+				<div class="section_title">
+					<h2>Nieuws</h2>
+				</div>
+				<!-- END APPS SCREEN TITLE -->
+			</div>
+		</div>
+	</div>
 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{% for post in site.posts limit: 3 %}
+				<div class="square">
+					<div class="fixed-img" style="background: url('{{site.baseurl}}/images/post/{{post.cover}}'); background-size: cover;">
+						<!--<img src="{{site.baseurl}}/images/post/{{post.cover}}">-->
+					</div>
 
-            </div>
-        </div>
-    </div>
+					<div class="content">
 
+						<div class="title">
+							{% if post.type == "event" %}
+							<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+							{% endif %}
+							{% if post.type == "blog" %}
+							<i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+							{% endif %}
+							{% if post.type == "fun" %}
+							<i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+							{% endif %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                {% for post in site.posts limit: 6 %}
-                <div class="square">
-                    <div class="content">
+							<span>{{ post.title }}</span>
+						</div>
 
-                        <a href="{{site.baseurl}}{{ post.url }}">
-                            {% if post.type == "event" %}
-                            <i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
-                            {% endif %}
-                            {% if post.type == "blog" %}
-                            <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
-                            {% endif %}
-                            {% if post.type == "fun" %}
-                            <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
-                            {% endif %}
+						{{ post.summary | truncatewords: 12}}
 
-                            <span>{{ post.title }}</span>
-                        </a>
+						<div>
+							<a class="content-readmore" href="{{site.baseurl}}{{ post.url }}">Lees meer...</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 
-                        {{ post.excerpt | truncatewords: 30}}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-    </div>
+	</div>
 
 </section>

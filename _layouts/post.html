@@ -2,22 +2,31 @@
 <html lang="en">
 
 {% include head.html %}
+
 <body>
+<!-- PRELOADER -->
+<div class="spn_hol">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+
 <section class="header">
 
 </section>
 
+<section class="{{page.type}} parallax" style="background: url('/images/post/{{page.cover}}') no-repeat center center fixed; background-size: cover;">
+    <div class="post-backdrop"></div>
 
-
-
-<section class="{{page.type}} parallax">
     <ol class="breadcrumb">
-        <li><a href="{{site.baseurl}}#NEWS">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="active">Nieuws</li>
         <li class="active">{{page.title}}</li>
     </ol>
 
-    <div class="section_overlay">
+    <div class="section_overlay post-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -37,4 +46,8 @@
 
 {% include footer.html %}
 
+{% include scripts.html %}
+
 </body>
+
+</html>

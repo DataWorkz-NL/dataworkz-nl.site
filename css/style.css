@@ -577,7 +577,7 @@ tuor:visited {
 }
 
 /* Exception for mobile */
-@media (pointer:none), (pointer:coarse) {
+@media (pointer: none), (pointer: coarse) {
     .testimonial {
         background-attachment: scroll !important;
     }
@@ -1313,6 +1313,8 @@ div.carousel-inner .item img {
     padding-bottom: 3px;
     padding-top: 3px;
     border-bottom: 3px solid #f39c12;
+    position: relative;
+    z-index: 2;
 }
 
 .copyright h2 {
@@ -1471,7 +1473,7 @@ Stuff for the posts page
 
 .posts_screen {
     background: #f1f1f1;
-    padding-bottom: 96px;
+    padding-bottom: 50px;
 }
 
 .parallax2 {
@@ -1493,34 +1495,48 @@ Stuff for the posts page
     background-color: rgba(59, 59, 59, 0.7)
 }
 
+.post-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+.post-content {
+    z-index: 2;
+    position: relative;
+}
+
 .section_post {
     padding-top: 90px;
     padding-bottom: 50px;
     color: snow;
 }
 
+.fun, .blog, .event {
+    min-height: calc(100vh - 37px);
+    background-size: cover;
+}
+
 .fun {
     background: url(../images/backgrounds/team-event.jpg) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-
 }
 
 .blog {
-    background-size: cover;
     background: url(../images/backgrounds/notebook.jpg) no-repeat;
-    height: auto;
-
 }
 
 .event {
-    background-size: cover;
     background: url(../images/backgrounds/conference.jpg) no-repeat;
-    height: auto;
 }
 
 .breadcrumb {
     background-color: rgba(59, 59, 59, 0.7);
+    border-radius: unset;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 
 .breadcrumb a {
