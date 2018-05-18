@@ -576,10 +576,17 @@ tuor:visited {
     min-height: 100vh;
 }
 
+/* Exception for mobile */
+@media (pointer:none), (pointer:coarse) {
+    .testimonial {
+        background-attachment: scroll !important;
+    }
+}
+
 .workatdataworkz {
     background-size: cover;
-    background: url(../images/backgrounds/subscribe.jpg) no-repeat;
     height: auto;
+    background: black url(../images/backgrounds/subscribe.jpg) no-repeat;
 }
 
 .section_title_snow ul {
