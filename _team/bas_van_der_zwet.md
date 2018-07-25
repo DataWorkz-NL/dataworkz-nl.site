@@ -1,8 +1,6 @@
 ---
 name: Bas van der Zwet
 mugshot: basz_overview.jpg
-role: Boss man
-alias: Mr. Nice guy
 ---
 * **Oakley skibril:** Snel de piste afknallen
 * **Truffelschaaf:** Lekker eten

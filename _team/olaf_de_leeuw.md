@@ -1,8 +1,6 @@
 ---
 name: Olaf de Leeuw
 mugshot: olaf_overview.jpg
-role: Scientist
-alias: Mathematician
 ---
 * **Leesboek**: Ik lees graag, liefst op vakantie, thrillers.
 * **Fietshelm**: Wielrennen is een geliefde bezigheid.

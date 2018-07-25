@@ -1,8 +1,6 @@
 ---
 name: Bas Poot
 mugshot: basp_overview.jpg
-role: Engineer
-alias: Watersports Junkie
 ---
 * **Paspoort**: Ik houd van reizen en zie de wereld graag. 
 * **Lonely Planet Colombia**: Laatste verre reis

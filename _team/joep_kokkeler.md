@@ -1,8 +1,6 @@
 ---
 name: Joep Kokkeler
 mugshot: joep_overview.jpg
-role: Engineer
-alias: Ops crazy
 ---
 * **Balls**: Het bewijs dat 4 piece niet duur hoeft te zijn. Beter gevoel dan een prov1 en fijnere rol dan een tp5x.
 * **Clubs**: Omdat custom clubs belangrijk zijn, zit er in mijn golftas niets off the shelf tussen. Nu nog mijn spel en het plaatje klopt.

@@ -1,8 +1,6 @@
 ---
 name: Jurriaan Biesheuvel
 mugshot: jurriaan_overview.jpg
-role: Engineer
-alias: Watersports Junkie
 ---
 * **Newtonpendel**: Visualisatie actie = reactie.
 * **Kompas**: Wijst meestal in de goede richting.
