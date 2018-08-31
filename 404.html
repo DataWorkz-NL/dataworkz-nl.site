@@ -2,7 +2,13 @@
 title: 404 Not Found
 permalink: /404.html
 redirect_from:
-- /news/
 ---
-
-<h2>Oeps, that's is a 404 !</h2>
+<link href="{{ '/css/error-page.css" rel="stylesheet' | prepend: site.baseurl }}">
+<div class="overlay"></div>
+<div class="terminal">
+    <h1>Error <span class="errorcode">404</span></h1>
+    <img src="/images/Dataworkz.png" style="position: absolute;top: 50%;left: 50%;" />
+    <p class="output">The page you are looking for might have been removed, had its name changed or is temporarily unavailable</ü>
+    <p class="output">Please try <a href="https://www.dataworkz.nl">this link</a> or <a href="https://www.dataworkz.nl#ABOUT">this link</a></p>
+    <p class="output">Good luck.</p>
+</div>
