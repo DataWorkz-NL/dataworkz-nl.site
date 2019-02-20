@@ -209,7 +209,7 @@ $(document).ready(function() {
 			$.ajax({
 				url: 'https://postmail.invotes.com/send',
 				data: {
-					access_token: 'pzs65rtmrrfgolhun27f4ip9',
+					access_token: 'e30yotw8h2k7muu24d2emfg9',
 					subject: subject,
 					text: 'Message: \n' + message + '\n\n Sender: ' + name + ' ' + emaild
 				},
