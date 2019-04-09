@@ -1,5 +1,5 @@
 ---
-name: Bart Wassink
+name: Bert Wassink
 mugshot: bert_overview.jpg
 ---
 
