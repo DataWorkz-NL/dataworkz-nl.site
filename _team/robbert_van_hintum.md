@@ -1,6 +1,6 @@
 ---
-name: Robert van Hintum
-mugshot: robert_overview.jpg
+name: Robbert van Hintum
+mugshot: robbert_overview.jpg
 ---
 
 * **Oeteldonk**:Mooiste dûrp van het land.

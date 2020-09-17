@@ -1,5 +1,5 @@
 ---
-name: Leslaw Kobosz
+name: Leslaw Kubosz
 mugshot: leslaw_overview.jpg
 
 --- 
